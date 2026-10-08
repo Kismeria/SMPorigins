@@ -1,0 +1,373 @@
+# ============================================================
+#  SmpOrigins — Русский
+#  Формат: MiniMessage. Язык выбирается по языку клиента игрока.
+#  Свой язык: скопируй файл как uk_ua.yml и переведи.
+# ============================================================
+
+# bump on every text change: the server file is replaced (old one kept as .old)
+version: 5
+
+prefix: "<dark_gray>[<gradient:#a970ff:#3fa7d6>Расы</gradient>]</dark_gray> <gray>"
+
+time:
+  m: " мин"
+  s: " сек"
+
+dialog:
+  welcome-title: "Твоя раса — <race>"
+  welcome-intro: "<gray>Судьба выбрала тебе расу. У каждой есть сильные и слабые стороны — играй от них."
+  welcome-button: "Понятно, в игру!"
+  own-title: "Твоя раса — <race>"
+  info-title: "Раса — <race>"
+  list-button: "Все расы"
+  close-button: "Закрыть"
+  difficulty: "<gray>Сложность: <dots>"
+
+welcome:
+  chat: "Твоя раса — <b><race></b><white>! Подробнее: <aqua>/class"
+  subtitle: "<gray>твоя раса"
+
+list:
+  title: "<dark_purple>Расы сервера"
+  close: "<red>Закрыть"
+  yours: "<green>Это твоя раса"
+  click: "<yellow>Нажми — подробнее"
+
+command:
+  no-permission: "<red>Нет прав."
+  not-online: "<red>Игрок не в сети."
+  unknown-race: "<red>Нет такой расы. Список: <white>/origin list"
+  set: "<green><player> теперь <race>"
+  reset-all: "<green>Расы перевыданы всем."
+  cd-reset: "<green>КД трансмутации <player> сброшен."
+  rune-ghost: "<green>Эхо предка для <player> снова доступно — извлеки руну."
+  altars-stopped: "<green>Погашено алтарей: <count>"
+  reloaded: "<green>Конфиг и языки перезагружены, рас: <count>"
+  usage: "<white>/class</white> — твоя раса, <white>/origin list</white> — все расы, <white>/origin info [раса]</white>"
+  usage-admin: "<white>/origin menu | set [ник] [раса] | reset [ник] | resetall | cdreset [ник] | runeghost [ник] | altarstop | reload"
+
+altar:
+  lit: "<dark_purple><b>✦</b> <light_purple>Алтарь рун пробуждён! <gray>Встань в центр"
+  failed: "<dark_gray><i>Ритуал не принял подношение... руны промолчали"
+  burnout: "<dark_gray><i>Алтарь рун угас... кристаллы рассыпались в прах"
+
+origins:
+  miner:
+    name: "Шахтёр"
+    description: "Мастер кирки, привыкший к темноте, но страдающий под солнцем."
+    abilities:
+      miner_underground:
+        title: "Подземный житель"
+        text: "Ускорение копания I ниже Y=<y1>, II ниже Y=<y2>"
+      miner_thick_skull:
+        title: "Крепкий лоб"
+        text: "Иммунитет к удушению в блоках"
+      miner_photophobia:
+        title: "Светобоязнь"
+        text: "Слабость и Замедление под открытым солнцем"
+      miner_heavy_lungs:
+        title: "Тяжёлые лёгкие"
+        text: "Максимум <hearts> сердец. В тесных шахтах чихаешь от пыли"
+  survivor:
+    name: "Выживший"
+    description: "Обычный человек, научившийся адаптироваться к суровому миру."
+    armor: "<red>Незерит слишком тяжёл для Выжившего!"
+    abilities:
+      survivor_adrenaline:
+        title: "Адреналин"
+        text: "Скорость II и Сопротивление I, когда здоровья меньше <hearts> сердец"
+      survivor_light_steps:
+        title: "Лёгкие шаги"
+        text: "Урон от падения меньше на <pct>"
+      survivor_soft_skin:
+        title: "Неженка"
+        text: "Не может носить незеритовую броню"
+      survivor_fast_metabolism:
+        title: "Быстрый метаболизм"
+        text: "Голод тратится быстрее при беге"
+  farmer:
+    name: "Фермер"
+    description: "Дитя природы, живущее за счёт земли и гармонии с растениями."
+    abilities:
+      farmer_green_thumb:
+        title: "Зелёный палец"
+        text: "Шанс <pct> двойного урожая. ПКМ мотыгой по грядке — сбор 3x3"
+      farmer_hearty_harvest:
+        title: "Сытный урожай"
+        text: "Растительная пища насыщает в <mult> раза сильнее (кроме хлеба и золотой моркови)"
+      farmer_vegetarian:
+        title: "Вегетарианец"
+        text: "От мяса тошнит и отравляет"
+      farmer_sun_lover:
+        title: "Дитя солнца"
+        text: "Слабость I, когда освещение ниже <light>"
+    msg:
+      meat: "<red>Фу, мясо..."
+  blacksmith:
+    name: "Кузнец"
+    description: "Закалённый в горне мастер тяжёлой брони и мощных ударов."
+    abilities:
+      blacksmith_enchanter:
+        title: "Искры кузни"
+        text: "Шанс <pct> зачаровать оружие, инструмент или броню при крафте"
+      blacksmith_heavy_strike:
+        title: "Тяжёлый удар"
+        text: "Урон топорами +<pct>"
+      blacksmith_iron_giant:
+        title: "Железный добряк"
+        text: "Замедление II в воде"
+      blacksmith_clumsy_hands:
+        title: "Неуклюжие руки"
+        text: "Не может стрелять из луков и арбалетов"
+    msg:
+      enchanted: "<gold>Искры кузни: предмет зачарован!"
+      clumsy: "<red>Ты слишком неуклюж для стрелкового оружия!"
+  fisherman:
+    name: "Рыболов"
+    description: "Твой дом — океан, а суша кажется слишком жаркой."
+    abilities:
+      fisherman_sea_wolf:
+        title: "Морской волк"
+        text: "+<seconds> сек подводного дыхания при погружении"
+      fisherman_lucky_catch:
+        title: "Зов моря"
+        text: "Примерно раз в час — Удача на <min>-<max> мин"
+      fisherman_ichthyologist:
+        title: "Диета ихтиолога"
+        text: "Рыба насыщает в <mult> раза сильнее"
+      fisherman_landlubber:
+        title: "Сухопутный"
+        text: "Слабость II в пустынях и бесплодных землях"
+      fisherman_flammable:
+        title: "Обезвоживание"
+        text: "Урон от огня и лавы +<pct>"
+    msg:
+      luck: "<aqua>Фортуна на твоей стороне! <gold>Удача</gold> на <minutes> мин."
+  hunter:
+    name: "Охотник"
+    description: "Зоркий стрелок и отличный следопыт, предпочитающий лёгкую защиту."
+    armor: "<red>Охотнику нужна лёгкая броня — алмаз и незерит слишком тяжёлые!"
+    golden-apples-note: " (кроме золотых яблок)"
+    abilities:
+      hunter_eagle_eye:
+        title: "Зоркий глаз"
+        text: "Урон снарядами +<pct>"
+      hunter_tracker:
+        title: "Следопыт"
+        text: "Скорость I при беге по траве"
+      hunter_vitality:
+        title: "Крепкое здоровье"
+        text: "Максимум <hearts> сердец"
+      hunter_light_armor:
+        title: "Лёгкая броня"
+        text: "Не может носить алмазную и незеритовую броню"
+      hunter_carnivore:
+        title: "Хищник"
+        text: "Не ест растительную пищу<note>"
+    msg:
+      carnivore: "<red>Ты хищник и не ешь растительную пищу!"
+  builder:
+    name: "Строитель"
+    description: "Мастер высотных работ, способный дотянуться до самых дальних блоков."
+    abilities:
+      builder_reach:
+        title: "Длинные руки"
+        text: "Дальность взаимодействия с блоками +<blocks>"
+      builder_climber:
+        title: "Страховка"
+        text: "Урон от падения меньше на <pct>"
+      builder_heavy_belt:
+        title: "Тяжёлый пояс"
+        text: "Скорость ходьбы ниже на <pct>"
+      builder_clumsy_fighter:
+        title: "Неуклюжий боец"
+        text: "Скорость атаки ниже на <pct>"
+  cook:
+    name: "Повар"
+    description: "Знает толк в хорошей еде и идеальной прожарке."
+    abilities:
+      cook_professional:
+        title: "Профессионал"
+        text: "Любая еда восстанавливает +<food> сытости"
+      cook_sharp_knife:
+        title: "Острый нож"
+        text: "Урон мечами +<pct>"
+      cook_gourmet:
+        title: "Гурман"
+        text: "Сырое мясо и рыба отравляют"
+      cook_sugar_crash:
+        title: "Голодный обморок"
+        text: "Слабость I, когда сытость <food> и ниже"
+    msg:
+      raw: "<red>Сырое? Гурман такое не ест..."
+  alchemist:
+    name: "Алхимик"
+    description: "Мастер зельеварения: трансмутирует бутылочки силой мысли, но расплачивается хрупким здоровьем."
+    abilities:
+      alchemist_extraction:
+        title: "Экстракция"
+        text: "Полезные зелья действуют в <good> раза дольше, вредные — в <bad> раза короче"
+      alchemist_transmutation:
+        title: "Трансмутация"
+        text: "Бутылочка: ЛКМ — случайное зелье, Shift+ПКМ — зловещий флакон. Зелье: ЛКМ — уровень, Shift+ПКМ — время (КД <cd> мин)"
+      alchemist_dependency:
+        title: "Химическая зависимость"
+        text: "Нельзя пить молоко"
+      alchemist_frail:
+        title: "Хрупкий организм"
+        text: "Максимум <hearts> сердец"
+    hint:
+      bottle: "<light_purple>ЛКМ зелье <dark_gray>· <yellow>Shift+ПКМ флакон"
+      ominous: "<yellow>Shift+ПКМ — усилить флакон"
+      both: "<light_purple>ЛКМ уровень <dark_gray>· <yellow>Shift+ПКМ время"
+      level: "<light_purple>ЛКМ — уровень зелья"
+      time: "<yellow>Shift+ПКМ — продлить"
+      max: "<gray>Зелье на максимуме"
+    msg:
+      cooldown: "<red>Трансмутация на перезарядке: <time>"
+      cooldown-bar: "<#c27ba0>Алхимия: <white><time>"
+      random-potion: "<light_purple>Ты материализовал случайное зелье!"
+      ominous: "<light_purple>Ты материализовал зловещий флакон!"
+      ominous-max: "<red>Зловещий флакон уже максимального уровня!"
+      ominous-up: "<light_purple>Зловещий флакон усилен до уровня <level>!"
+      cant-level: "<red>Это зелье нельзя усилить."
+      leveled: "<light_purple>Уровень зелья повышен!"
+      cant-extend: "<red>Это зелье нельзя продлить."
+      extended: "<light_purple>Длительность зелья увеличена!"
+      milk: "<red>Химическая зависимость не даёт пить молоко!"
+  rogue:
+    name: "Разбойник"
+    description: "Скрытный воин ночи, наносящий смертельные удары в спину."
+    attack-note: " или атака"
+    abilities:
+      rogue_night_stalker:
+        title: "Ночной охотник"
+        text: "Скорость I ночью"
+      rogue_stealth:
+        title: "Скрытность"
+        text: "Присядь на <seconds> сек — невидимость. Броня снимается и наденется обратно при выходе, предметы в руках скрыты. Быстрый шаг вприсядку"
+      rogue_backstab:
+        title: "Подлый удар"
+        text: "Урон в спину +<pct>"
+      rogue_frail:
+        title: "Хрупкий"
+        text: "Максимум <hearts> сердец. Урон<attack> снимает скрытность (КД <cd> сек)"
+      rogue_sun_weakness:
+        title: "Боязнь света"
+        text: "Слабость днём под открытым небом"
+    msg:
+      cooldown: "<gray>Тень через <white><seconds> сек"
+      vanished: "<dark_purple>Ты растворился в тенях"
+      broken: "<red>Скрытность нарушена! КД <seconds> сек."
+      backstab: "<green><b>ПОДЛЫЙ УДАР!</b> <gray>(+<pct> урона)"
+    hint:
+      hidden: "<dark_purple>Ты в тенях"
+  runesmith:
+    name: "Руномант"
+    description: "Мастер живого письма рун. Презирает столы зачарования — для него это костыль глупцов."
+    abilities:
+      rune_charge:
+        title: "Ритуал крови"
+        text: "Книга в руке + присед — копишь заряд руны (полный за <seconds> сек), он стоит <hp> HP и <xp> ур. опыта. Заряд не сгорает — можно доплатить позже"
+      rune_extract:
+        title: "Извлечение"
+        text: "При полном заряде Shift+ПКМ с зачарованным предметом — выбираешь чар, он уходит в книгу (нужна обычная книга)"
+      rune_fusion:
+        title: "Слияние рун"
+        text: "Две одинаковые книги-руны в обеих руках + ЛКМ — одна руна уровнем выше (до <max>)"
+      rune_altar:
+        title: "Алтарь рун"
+        text: "Стоя на горящем алтаре, заряд копится в <speed> раза быстрее и на <pct> дешевле"
+      rune_cough:
+        title: "Жгучая руна"
+        text: "Пока руна заряжена — каждые <seconds> сек кашляешь кровью"
+      rune_no_table:
+        title: "Гордыня"
+        text: "Не пользуется столом зачарования"
+    menu-title: "<dark_purple>Выбор руны"
+    bar:
+      charging: "<red>-HP <yellow>-XP"
+      charging-altar: "<red>-HP <yellow>-XP <light_purple>★ алтарь"
+      idle: "<gray>Присядь — заряд руны"
+      full: "<light_purple><b>★ РУНА ЗАРЯЖЕНА ★"
+      full-item: "<gold>Shift+ПКМ — извлечь руну"
+      full-book: "<light_purple>Возьми зачарованный предмет"
+    msg:
+      no-health: "<red>Мало здоровья для ритуала"
+      no-xp: "<red>Нужен опыт для ритуала"
+      need-book: "<red>Для руны нужна обычная книга в инвентаре."
+      extracted: "<dark_purple><b>✦</b> <light_purple>Руна извлечена! <gray>Книга обращена в прах."
+      cough: "<dark_red><b>☠ Кашель кровью..."
+      table: "<dark_purple>Руномант не унижается до стола зачарования."
+      fusion-max: "<red>Эту руну уже нельзя усилить слиянием!"
+      fusion-mismatch: "<gray>В левой руке должна быть <white>такая же руна</white> (тот же чар и уровень)."
+      fused: "<dark_purple><b>✦</b> <light_purple>Слияние рун! <gray>Получена руна уровня <yellow><level></yellow>."
+    ancestor:
+      rise: "<dark_gray><i>✦ Дух древнего руноманта восстаёт из рун..."
+      name: "<dark_gray><i>Дух руноманта"
+      phrases:
+        - "Я тоже когда-то платил кровью за каждую руну..."
+        - "Руны помнят всё. И тебя запомнят."
+        - "Знание не даётся даром. Ты уже это понял."
+        - "Однажды и твоя душа будет шептать другому..."
+        - "Я вырезал руны, пока кровь не стала чернилами."
+        - "Берегись. Жадность до рун сгубила многих из нас."
+        - "Каждая руна — это чья-то отданная жизнь."
+        - "Ты слышишь меня? Значит, ты один из нас."
+        - "Мы не умираем. Мы становимся эхом в рунах."
+        - "Я отдал всё ради знания. И не жалею... почти."
+        - "Книга — это могила чужой магии. Помни об этом."
+        - "Сила, что ты вырвал, однажды вырвется из тебя."
+        - "Терпение, ученик. Руны не терпят спешки."
+        - "Я был великим. Теперь я лишь шёпот. Как и ты будешь."
+        - "Кровь, опыт, душа — вот истинная цена письмён."
+        - "Не бойся боли ритуала. Бойся жажды, что за ней."
+
+# названия чисел в /smp → Расы → ПКМ по расе
+param:
+  haste-1-below-y: "Спешка I ниже Y"
+  haste-2-below-y: "Спешка II ниже Y"
+  max-health-delta: "Изменение макс. здоровья (HP)"
+  sneeze-chance: "Шанс чиха (раз в 10 сек)"
+  adrenaline-below-hp: "Адреналин ниже HP"
+  fall-damage-reduction: "Снижение урона от падения"
+  sprint-exhaustion-per-second: "Истощение при беге в сек"
+  double-harvest-chance: "Шанс двойного урожая"
+  plant-food-multiplier: "Множитель сытости растений"
+  weak-below-light: "Слабость при свете ниже"
+  craft-enchant-chance: "Шанс зачарования при крафте"
+  axe-damage-bonus: "Бонус урона топорами"
+  water-breathing-seconds: "Подводное дыхание, сек"
+  luck-chance-per-minute: "Шанс Удачи в минуту"
+  luck-min-minutes: "Удача минимум, мин"
+  luck-max-minutes: "Удача максимум, мин"
+  fish-food-multiplier: "Множитель сытости рыбы"
+  fire-damage-multiplier: "Множитель урона от огня"
+  projectile-damage-bonus: "Бонус урона снарядами"
+  carnivore-allows-golden-apples: "Хищнику можно золотые яблоки"
+  extra-block-reach: "Доп. дальность до блоков"
+  movement-slow: "Замедление ходьбы"
+  attack-speed-penalty: "Штраф скорости атаки"
+  bonus-food: "Доп. сытость от еды"
+  sword-damage-bonus: "Бонус урона мечами"
+  weak-at-food-or-below: "Слабость при сытости ≤"
+  transmutation-cooldown-minutes: "КД трансмутации, мин"
+  beneficial-duration-multiplier: "Множитель полезных зелий"
+  harmful-duration-multiplier: "Множитель вредных зелий"
+  stealth-sneak-ticks: "Приседать до скрытности, тиков"
+  stealth-cooldown-seconds: "КД скрытности, сек"
+  backstab-damage-bonus: "Бонус урона в спину"
+  backstab-angle: "Угол удара в спину, °"
+  sneak-speed-bonus: "Бонус скорости приседа"
+  attack-breaks-stealth: "Атака снимает скрытность"
+  altar-speed-multiplier: "Скорость на алтаре"
+  altar-cost-multiplier: "Цена на алтаре"
+  min-health-left: "Минимум HP после ритуала"
+  full-charge-health: "Полный заряд: HP"
+  full-charge-xp-levels: "Полный заряд: уровни опыта"
+  charge-seconds: "Время полного заряда, сек"
+  cough-interval-seconds: "Кашель раз в, сек"
+  cough-damage: "Урон кашля, HP"
+  fusion-max-level: "Слияние до уровня"
+  ancestor-echo: "Эхо предка (раз в сутки)"
+  no-enchanting-table: "Запрет стола зачарования"

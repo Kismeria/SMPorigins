@@ -1,0 +1,371 @@
+# ============================================================
+#  SmpOrigins — English
+#  Format: MiniMessage. Picked by the player's client language.
+# ============================================================
+
+# bump on every text change: the server file is replaced (old one kept as .old)
+version: 5
+
+prefix: "<dark_gray>[<gradient:#a970ff:#3fa7d6>Origins</gradient>]</dark_gray> <gray>"
+
+time:
+  m: "m"
+  s: "s"
+
+dialog:
+  welcome-title: "Your origin — <race>"
+  welcome-intro: "<gray>Fate picked your origin. Every one has strengths and weaknesses — play to them."
+  welcome-button: "Got it, let me in!"
+  own-title: "Your origin — <race>"
+  info-title: "Origin — <race>"
+  list-button: "All origins"
+  close-button: "Close"
+  difficulty: "<gray>Difficulty: <dots>"
+
+welcome:
+  chat: "Your origin is <b><race></b><white>! More: <aqua>/class"
+  subtitle: "<gray>your origin"
+
+list:
+  title: "<dark_purple>Server origins"
+  close: "<red>Close"
+  yours: "<green>This is your origin"
+  click: "<yellow>Click for details"
+
+command:
+  no-permission: "<red>No permission."
+  not-online: "<red>Player is not online."
+  unknown-race: "<red>No such origin. List: <white>/origin list"
+  set: "<green><player> is now <race>"
+  reset-all: "<green>Origins re-rolled for everyone."
+  cd-reset: "<green>Transmutation cooldown of <player> reset."
+  rune-ghost: "<green>Ancestor's echo is available again for <player> — extract a rune."
+  altars-stopped: "<green>Altars put out: <count>"
+  reloaded: "<green>Config and languages reloaded, origins: <count>"
+  usage: "<white>/class</white> — your origin, <white>/origin list</white> — all origins, <white>/origin info [origin]</white>"
+  usage-admin: "<white>/origin menu | set [name] [origin] | reset [name] | resetall | cdreset [name] | runeghost [name] | altarstop | reload"
+
+altar:
+  lit: "<dark_purple><b>✦</b> <light_purple>The rune altar awakens! <gray>Stand in the centre"
+  failed: "<dark_gray><i>The ritual rejected the offering... the runes stay silent"
+  burnout: "<dark_gray><i>The rune altar faded... the crystals crumbled to dust"
+
+origins:
+  miner:
+    name: "Miner"
+    description: "Master of the pickaxe, used to darkness but suffering under the sun."
+    abilities:
+      miner_underground:
+        title: "Underground Dweller"
+        text: "Haste I below Y=<y1>, II below Y=<y2>"
+      miner_thick_skull:
+        title: "Thick Skull"
+        text: "Immune to suffocation in blocks"
+      miner_photophobia:
+        title: "Photophobia"
+        text: "Weakness and Slowness under open sun"
+      miner_heavy_lungs:
+        title: "Heavy Lungs"
+        text: "<hearts> hearts max. Sneezes from dust in tight tunnels"
+  survivor:
+    name: "Survivor"
+    description: "An ordinary person who learned to adapt to a harsh world."
+    armor: "<red>Netherite is too heavy for a Survivor!"
+    abilities:
+      survivor_adrenaline:
+        title: "Adrenaline"
+        text: "Speed II and Resistance I below <hearts> hearts"
+      survivor_light_steps:
+        title: "Light Steps"
+        text: "<pct> less fall damage"
+      survivor_soft_skin:
+        title: "Soft Skin"
+        text: "Can't wear netherite armor"
+      survivor_fast_metabolism:
+        title: "Fast Metabolism"
+        text: "Hunger drains faster while sprinting"
+  farmer:
+    name: "Farmer"
+    description: "A child of nature living off the land in harmony with plants."
+    abilities:
+      farmer_green_thumb:
+        title: "Green Thumb"
+        text: "<pct> chance of double harvest. Right-click crops with a hoe — 3x3 harvest"
+      farmer_hearty_harvest:
+        title: "Hearty Harvest"
+        text: "Plant food fills <mult>x more (except bread and golden carrots)"
+      farmer_vegetarian:
+        title: "Vegetarian"
+        text: "Meat causes nausea and poison"
+      farmer_sun_lover:
+        title: "Sun Child"
+        text: "Weakness I when light is below <light>"
+    msg:
+      meat: "<red>Ugh, meat..."
+  blacksmith:
+    name: "Blacksmith"
+    description: "A forge-hardened master of heavy armor and mighty blows."
+    abilities:
+      blacksmith_enchanter:
+        title: "Forge Sparks"
+        text: "<pct> chance to enchant a crafted weapon, tool or armor piece"
+      blacksmith_heavy_strike:
+        title: "Heavy Strike"
+        text: "+<pct> axe damage"
+      blacksmith_iron_giant:
+        title: "Iron Giant"
+        text: "Slowness II in water"
+      blacksmith_clumsy_hands:
+        title: "Clumsy Hands"
+        text: "Can't shoot bows or crossbows"
+    msg:
+      enchanted: "<gold>Forge sparks: the item got enchanted!"
+      clumsy: "<red>You are too clumsy for ranged weapons!"
+  fisherman:
+    name: "Fisherman"
+    description: "The ocean is your home, and land feels far too hot."
+    abilities:
+      fisherman_sea_wolf:
+        title: "Sea Wolf"
+        text: "+<seconds>s of water breathing when diving in"
+      fisherman_lucky_catch:
+        title: "Call of the Sea"
+        text: "About once an hour — Luck for <min>-<max> min"
+      fisherman_ichthyologist:
+        title: "Fish Diet"
+        text: "Fish fills <mult>x more"
+      fisherman_landlubber:
+        title: "Landlubber"
+        text: "Weakness II in deserts and badlands"
+      fisherman_flammable:
+        title: "Dehydration"
+        text: "+<pct> fire and lava damage"
+    msg:
+      luck: "<aqua>Fortune smiles on you! <gold>Luck</gold> for <minutes> min."
+  hunter:
+    name: "Hunter"
+    description: "A sharp-eyed archer and tracker who prefers light protection."
+    armor: "<red>A Hunter needs light armor — diamond and netherite are too heavy!"
+    golden-apples-note: " (golden apples are fine)"
+    abilities:
+      hunter_eagle_eye:
+        title: "Eagle Eye"
+        text: "+<pct> projectile damage"
+      hunter_tracker:
+        title: "Tracker"
+        text: "Speed I while sprinting on grass"
+      hunter_vitality:
+        title: "Vitality"
+        text: "<hearts> hearts max"
+      hunter_light_armor:
+        title: "Light Armor"
+        text: "Can't wear diamond or netherite armor"
+      hunter_carnivore:
+        title: "Carnivore"
+        text: "Can't eat plant food<note>"
+    msg:
+      carnivore: "<red>You are a carnivore and don't eat plants!"
+  builder:
+    name: "Builder"
+    description: "A high-rise master who reaches the farthest blocks."
+    abilities:
+      builder_reach:
+        title: "Long Arms"
+        text: "+<blocks> block interaction range"
+      builder_climber:
+        title: "Safety Rope"
+        text: "<pct> less fall damage"
+      builder_heavy_belt:
+        title: "Heavy Tool Belt"
+        text: "<pct> slower walking"
+      builder_clumsy_fighter:
+        title: "Clumsy Fighter"
+        text: "<pct> slower attacks"
+  cook:
+    name: "Cook"
+    description: "Knows good food and the perfect sear."
+    abilities:
+      cook_professional:
+        title: "Professional"
+        text: "Any food restores +<food> hunger"
+      cook_sharp_knife:
+        title: "Sharp Knife"
+        text: "+<pct> sword damage"
+      cook_gourmet:
+        title: "Gourmet"
+        text: "Raw meat and fish poison you"
+      cook_sugar_crash:
+        title: "Sugar Crash"
+        text: "Weakness I at <food> hunger or less"
+    msg:
+      raw: "<red>Raw? A gourmet won't eat that..."
+  alchemist:
+    name: "Alchemist"
+    description: "A brewing master who transmutes bottles by will, at the cost of fragile health."
+    abilities:
+      alchemist_extraction:
+        title: "Extraction"
+        text: "Good potions last <good>x longer, harmful ones <bad>x shorter"
+      alchemist_transmutation:
+        title: "Transmutation"
+        text: "Bottle: LMB — random potion, Shift+RMB — ominous bottle. Potion: LMB — level, Shift+RMB — duration (<cd> min cooldown)"
+      alchemist_dependency:
+        title: "Chemical Dependency"
+        text: "Can't drink milk"
+      alchemist_frail:
+        title: "Frail Body"
+        text: "<hearts> hearts max"
+    hint:
+      bottle: "<light_purple>LMB potion <dark_gray>· <yellow>Shift+RMB bottle"
+      ominous: "<yellow>Shift+RMB — empower bottle"
+      both: "<light_purple>LMB level <dark_gray>· <yellow>Shift+RMB time"
+      level: "<light_purple>LMB — potion level"
+      time: "<yellow>Shift+RMB — extend"
+      max: "<gray>Potion is maxed"
+    msg:
+      cooldown: "<red>Transmutation is on cooldown: <time>"
+      cooldown-bar: "<#c27ba0>Alchemy: <white><time>"
+      random-potion: "<light_purple>You conjured a random potion!"
+      ominous: "<light_purple>You conjured an ominous bottle!"
+      ominous-max: "<red>The ominous bottle is already at max level!"
+      ominous-up: "<light_purple>Ominous bottle empowered to level <level>!"
+      cant-level: "<red>This potion can't be leveled up."
+      leveled: "<light_purple>Potion level raised!"
+      cant-extend: "<red>This potion can't be extended."
+      extended: "<light_purple>Potion duration extended!"
+      milk: "<red>Your chemical dependency won't let you drink milk!"
+  rogue:
+    name: "Rogue"
+    description: "A stealthy night warrior who strikes deadly blows from behind."
+    attack-note: " or attacking"
+    abilities:
+      rogue_night_stalker:
+        title: "Night Stalker"
+        text: "Speed I at night"
+      rogue_stealth:
+        title: "Stealth"
+        text: "Sneak for <seconds>s — invisible. Armor comes off and goes back on when you leave, held items hidden. Fast sneaking"
+      rogue_backstab:
+        title: "Backstab"
+        text: "+<pct> damage from behind"
+      rogue_frail:
+        title: "Frail"
+        text: "<hearts> hearts max. Taking damage<attack> breaks stealth (<cd>s cooldown)"
+      rogue_sun_weakness:
+        title: "Fear of Light"
+        text: "Weakness in daylight under open sky"
+    msg:
+      cooldown: "<gray>Shadows in <white><seconds>s"
+      vanished: "<dark_purple>You melt into the shadows"
+      broken: "<red>Stealth broken! <seconds>s cooldown."
+      backstab: "<green><b>BACKSTAB!</b> <gray>(+<pct> damage)"
+    hint:
+      hidden: "<dark_purple>In the shadows"
+  runesmith:
+    name: "Runesmith"
+    description: "A master of living rune script. Scorns enchanting tables — a crutch for fools."
+    abilities:
+      rune_charge:
+        title: "Blood Ritual"
+        text: "Book in hand + sneaking charges a rune (full in <seconds>s) for <hp> HP and <xp> XP levels. The charge stays — pay the rest later"
+      rune_extract:
+        title: "Extraction"
+        text: "With a full rune, Shift+RMB holding an enchanted item — pick an enchantment, it moves into a book (needs a plain book)"
+      rune_fusion:
+        title: "Rune Fusion"
+        text: "Two equal rune books in both hands + LMB — one rune a level higher (up to <max>)"
+      rune_altar:
+        title: "Rune Altar"
+        text: "Standing on a lit altar the rune charges <speed>x faster and <pct> cheaper"
+      rune_cough:
+        title: "Burning Rune"
+        text: "While the rune is charged you cough blood every <seconds>s"
+      rune_no_table:
+        title: "Pride"
+        text: "Won't use enchanting tables"
+    menu-title: "<dark_purple>Choose a rune"
+    bar:
+      charging: "<red>-HP <yellow>-XP"
+      charging-altar: "<red>-HP <yellow>-XP <light_purple>★ altar"
+      idle: "<gray>Sneak to charge the rune"
+      full: "<light_purple><b>★ RUNE CHARGED ★"
+      full-item: "<gold>Shift+RMB — extract rune"
+      full-book: "<light_purple>Take an enchanted item"
+    msg:
+      no-health: "<red>Too little health"
+      no-xp: "<red>Need XP for the ritual"
+      need-book: "<red>A rune needs a plain book in your inventory."
+      extracted: "<dark_purple><b>✦</b> <light_purple>Rune extracted! <gray>The book turned to dust."
+      cough: "<dark_red><b>☠ Coughing blood..."
+      table: "<dark_purple>A Runesmith won't stoop to an enchanting table."
+      fusion-max: "<red>This rune can't be fused any higher!"
+      fusion-mismatch: "<gray>The off hand must hold <white>the same rune</white> (same enchantment and level)."
+      fused: "<dark_purple><b>✦</b> <light_purple>Rune fusion! <gray>Got a level <yellow><level></yellow> rune."
+    ancestor:
+      rise: "<dark_gray><i>✦ The spirit of an ancient runesmith rises from the runes..."
+      name: "<dark_gray><i>Runesmith's spirit"
+      phrases:
+        - "I too once paid in blood for every rune..."
+        - "The runes remember everything. They will remember you."
+        - "Knowledge is never free. You know that by now."
+        - "One day your soul will whisper to another..."
+        - "I carved runes until my blood became ink."
+        - "Beware. Greed for runes has ruined many of us."
+        - "Every rune is someone's life given away."
+        - "You hear me? Then you are one of us."
+        - "We don't die. We become echoes in the runes."
+        - "I gave everything for knowledge. And I don't regret it... almost."
+        - "A book is a grave of someone else's magic. Remember that."
+        - "The power you ripped out will one day rip out of you."
+        - "Patience, apprentice. Runes don't tolerate haste."
+        - "I was great. Now I am only a whisper. As you will be."
+        - "Blood, experience, soul — the true price of the script."
+        - "Don't fear the ritual's pain. Fear the thirst behind it."
+
+param:
+  haste-1-below-y: "Haste I below Y"
+  haste-2-below-y: "Haste II below Y"
+  max-health-delta: "Max health change (HP)"
+  sneeze-chance: "Sneeze chance (every 10s)"
+  adrenaline-below-hp: "Adrenaline below HP"
+  fall-damage-reduction: "Fall damage reduction"
+  sprint-exhaustion-per-second: "Sprint exhaustion per second"
+  double-harvest-chance: "Double harvest chance"
+  plant-food-multiplier: "Plant food multiplier"
+  weak-below-light: "Weakness below light"
+  craft-enchant-chance: "Craft enchant chance"
+  axe-damage-bonus: "Axe damage bonus"
+  water-breathing-seconds: "Water breathing, s"
+  luck-chance-per-minute: "Luck chance per minute"
+  luck-min-minutes: "Luck min, minutes"
+  luck-max-minutes: "Luck max, minutes"
+  fish-food-multiplier: "Fish food multiplier"
+  fire-damage-multiplier: "Fire damage multiplier"
+  projectile-damage-bonus: "Projectile damage bonus"
+  carnivore-allows-golden-apples: "Carnivore may eat golden apples"
+  extra-block-reach: "Extra block reach"
+  movement-slow: "Walking slowdown"
+  attack-speed-penalty: "Attack speed penalty"
+  bonus-food: "Extra hunger from food"
+  sword-damage-bonus: "Sword damage bonus"
+  weak-at-food-or-below: "Weakness at hunger ≤"
+  transmutation-cooldown-minutes: "Transmutation cooldown, min"
+  beneficial-duration-multiplier: "Good potion multiplier"
+  harmful-duration-multiplier: "Harmful potion multiplier"
+  stealth-sneak-ticks: "Sneak ticks before stealth"
+  stealth-cooldown-seconds: "Stealth cooldown, s"
+  backstab-damage-bonus: "Backstab damage bonus"
+  backstab-angle: "Backstab angle, °"
+  sneak-speed-bonus: "Sneak speed bonus"
+  attack-breaks-stealth: "Attacking breaks stealth"
+  altar-speed-multiplier: "Altar speed"
+  altar-cost-multiplier: "Altar cost"
+  min-health-left: "Min HP after ritual"
+  full-charge-health: "Full charge: HP"
+  full-charge-xp-levels: "Full charge: XP levels"
+  charge-seconds: "Full charge time, s"
+  cough-interval-seconds: "Cough every, s"
+  cough-damage: "Cough damage, HP"
+  fusion-max-level: "Fusion up to level"
+  ancestor-echo: "Ancestor's echo (once a day)"
+  no-enchanting-table: "No enchanting table"

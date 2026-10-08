@@ -1,0 +1,28 @@
+# SmpOrigins — расы для SMP. Работает вместе с SmpCore: /smp → «Расы».
+# Раса выдаётся случайно при первом входе, игрока встречает окно с её плюсами и минусами.
+# Тексты — lang/<язык>.yml (по языку клиента, как в SmpCore). Числа способностей — origins.<раса>.
+# После ручной правки: /origin reload
+
+# «Сбросить SMP» в SmpCore заново раздаёт всем случайные расы
+reset-with-smp: true
+
+welcome:
+  # показывать окно расы при каждом входе (false — только когда раса новая)
+  every-join: false
+  # через сколько секунд после входа в мир показать окно расы
+  delay-seconds: 2
+
+migration:
+  # старый Skript менял базовые атрибуты через /attribute ... base set (хп 16/24, скорость атаки 3.4, присед 0.7).
+  # true — вернуть им ванильные значения при входе, плагин даёт статы своими модификаторами
+  reset-skript-base-attributes: true
+
+altar:
+  duration-seconds: 180
+  success-chance: 0.3
+  fail-cooldown-seconds: 5
+  burnout-breaks-min: 2
+  burnout-breaks-max: 3
+
+# чтобы выключить расу: origins.<раса>.enabled: false (или ЛКМ в /smp → Расы)
+origins: {}

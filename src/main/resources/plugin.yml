@@ -1,0 +1,17 @@
+name: SmpOrigins
+version: '${version}'
+main: me.kismeria.origins.OriginsPlugin
+api-version: '26.3'
+author: Kismeria
+depend: [SmpCore]
+softdepend: [floodgate]
+description: Расы для SMP — выдаются случайно при входе, настройки в /smp
+commands:
+  origin:
+    description: Твоя раса, список рас и админка
+    usage: /origin [info|list|set|reset|resetall|cdreset|altarstop|reload|menu]
+    aliases: [class, origins, rasa, race]
+permissions:
+  origins.admin:
+    description: Админ-команды /origin set|reset|resetall|cdreset|altarstop|reload|menu
+    default: op
